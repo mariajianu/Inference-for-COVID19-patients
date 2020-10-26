@@ -13,7 +13,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Proiect no. 1 for MPS Course.
+Project no. 1 for MPS Course.
 
 ## Getting Started
 
