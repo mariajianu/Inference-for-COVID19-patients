@@ -5,6 +5,7 @@
 
 * [About the Project](#about-the-project)
   * [Used Technologies](#usedtechnologies)
+  * [How does it work? ](#howitworks)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -25,6 +26,13 @@ We aim to build an inference system to automatically compute the chance of infec
  * Html
  * Css
 
+### How does it work?
+ 
+ * ML in Python, compiled and tested on Google Colab
+ * Front-end in Html,CSS & JavaScript
+ * Back-end in C# .NET Core where we will integrate the Python ML model
+ * Front-end - Back-end connection done through ASP.NET MVC
+ 
 ## Getting Started
 
 ### Prerequisites
