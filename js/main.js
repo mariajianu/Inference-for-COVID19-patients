@@ -1,104 +1,79 @@
-(function($) {
+
+(function ($) {
+    "use strict";
 
 
-
-    var form = $("#signup-form");
-    form.validate({
-        errorPlacement: function errorPlacement(error, element) {
-             element.before(error); 
-        },
-        rules: {
-            first_name : {
-                required: true,
-            },
-            last_name : {
-                required: true,
-            },
-            email : {
-                required: true,
+    /*==================================================================
+    [ Validate after type ]*/
+    $('.validate-input .input100').each(function(){
+        $(this).on('blur', function(){
+            if(validate(this) == false){
+                showValidate(this);
             }
-        },
-        onfocusout: function(element) {
-            $(element).valid();
-        },
-        highlight : function(element, errorClass, validClass) {
-            $(element.form).find('.actions').addClass('form-error');
-            $(element).parent().find('.form-label').addClass('form-label-error');
-            $(element).removeClass('valid');
-            $(element).addClass('error');
-        },
-        unhighlight: function(element, errorClass, validClass) {
-            $(element.form).find('.actions').removeClass('form-error');
-            $(element).parent().find('.form-label').removeClass('form-label-error');
-            $(element).removeClass('error');
-            $(element).addClass('valid');
-        }
-    });
-    form.children("div").steps({
-        headerTag: "h3",
-        bodyTag: "fieldset",
-        transitionEffect: "fade",
-        labels: {
-            previous : '<i class="zmdi zmdi-chevron-left"></i>',
-            next : '<i class="zmdi zmdi-chevron-right"></i>',
-            finish : '<i class="zmdi zmdi-chevron-right"></i>'
-        },
-        onStepChanging: function (event, currentIndex, newIndex)
-        {
-            // if(currentIndex === 0) {
-            //     form.parent().parent().parent().append('<div class="footer footer-' + currentIndex + '"></div>');
-            // }
-            // if(currentIndex === 1) {
-            //     form.parent().parent().parent().find('.footer').removeClass('footer-0').addClass('footer-'+ currentIndex + '');
-            // }
-            // if(currentIndex === 2) {
-            //     form.parent().parent().parent().find('.footer').removeClass('footer-1').addClass('footer-'+ currentIndex + '');
-            // }
-            // if(currentIndex === 3) {
-            //     form.parent().parent().parent().find('.footer').removeClass('footer-2').addClass('footer-'+ currentIndex + '');
-            // }
-            // if(currentIndex === 4) {
-            //     form.parent().parent().parent().append('<div class="footer" style="height:752px;"></div>');
-            // }
-            form.validate().settings.ignore = ":disabled,:hidden";
-            return form.valid();
-        },
-        onFinishing: function (event, currentIndex)
-        {
-            form.validate().settings.ignore = ":disabled";
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex)
-        {
-            form.parent().parent().append('<h1>Vă mulțumim pentru răspunsuri !</h1>').parent().addClass('finished');
-            return true;
-        },
-        onStepChanged : function (event, currentIndex, priorIndex) {
+            else {
+                $(this).parent().addClass('true-validate');
+            }
+        })    
+    })
+  
+  
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
 
-            return true;
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
         }
+
+        return check;
     });
 
-    jQuery.extend(jQuery.validator.messages, {
-        required: "",
-        remote: "",
-        email: "",
-        url: "",
-        date: "",
-        dateISO: "",
-        number: "",
-        digits: "",
-        creditcard: "",
-        equalTo: ""
-    });
-    $(".toggle-password").on('click', function() {
 
-        $(this).toggleClass("zmdi-eye zmdi-eye-off");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-          input.attr("type", "text");
-        } else {
-          input.attr("type", "password");
-        }
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+           $(this).parent().removeClass('true-validate');
+        });
     });
+
+     function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+
+        $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>')
+        $('.btn-hide-validate').each(function(){
+            $(this).on('click',function(){
+               hideValidate(this);
+            });
+        });
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+        $(thisAlert).removeClass('alert-validate');
+        $(thisAlert).find('.btn-hide-validate').remove();
+    }
+    
+    
+
 })(jQuery);
