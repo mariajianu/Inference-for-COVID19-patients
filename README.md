@@ -14,6 +14,7 @@
 ## About The Project
 
 Project no. 1 for MPS Course.
+We aim to build an inference system to automatically compute the chance of infecting with COVID-19 for a patient, using medical and demographical information.
 
 ## Getting Started
 
