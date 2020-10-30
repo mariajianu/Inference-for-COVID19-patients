@@ -10,6 +10,8 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Contributing](#contributing)
+  * [The Team](#team)
+  * [Role distribution](#roles)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -41,7 +43,7 @@ We aim to build an inference system to automatically compute the chance of infec
 
 ## Contributing
 
-The team:
+### The team
 
 * Maria Burtea 342C2
 * Maria Jianu 342C2
@@ -51,7 +53,7 @@ The team:
 * Laura Ghilinta 342C2
 * Darius-Octavian Dragoi 342C3
 
-Role distribution:
+### Role distribution
 
 * Alexandru Andries & Andrei Spataru - Machine Learning, Data Normalization & ML - Back-end Integration
 * George Glod - Front-end - Back-end Connection
