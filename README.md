@@ -50,3 +50,10 @@ The team:
 * George Glod 341C2
 * Laura Ghilinta 342C2
 * Darius-Octavian Dragoi 342C3
+
+Role distribution:
+
+* Alexandru Andries & Andrei Spataru - Machine Learning, Data Normalization & ML - Back-end Integration
+* George Glod - Front-end - Back-end Connection
+* Maria Jianu & Maria Burtea - Front-end Development
+* Laura Ghilinta & Darius Dragoi - Project Management, Documentation & Versioning
