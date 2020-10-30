@@ -29,7 +29,7 @@ We aim to build an inference system to automatically compute the chance of infec
 ### How does it work?
  
  * ML in Python, compiled and tested on Google Colab
- * Front-end in Html,CSS & JavaScript
+ * Front-end in Html, CSS & JavaScript
  * Back-end in C# .NET Core where we will integrate the Python ML model
  * Front-end - Back-end connection done through ASP.NET MVC
  
