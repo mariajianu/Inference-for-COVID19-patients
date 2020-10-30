@@ -28,9 +28,10 @@ We aim to build an inference system to automatically compute the chance of infec
 
 The team:
 
-* Maria Burtea
-* Maria Jianu
-* Alexandru Andries
-* Andrei Spataru
-* George Glod
-* Laura Ghilinta
+* Maria Burtea 342C2
+* Maria Jianu 342C2
+* Alexandru Andries 341C1
+* Andrei Spataru 343C5
+* George Glod 341C2
+* Laura Ghilinta 342C2
+* Darius-Octavian Dragoi 342C3
