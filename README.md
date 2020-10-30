@@ -24,3 +24,12 @@ Project no. 1 for MPS Course.
 ## Usage
 
 ## Contributing
+
+The team:
+
+* Maria Burtea
+* Maria Jianu
+* Alexandru Andries
+* Andrei Spataru
+* George Glod
+* Laura Ghilinta
