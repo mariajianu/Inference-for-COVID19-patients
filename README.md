@@ -23,7 +23,7 @@ We aim to build an inference system to automatically compute the chance of infec
 
  * Python
  * C# 
- * NET
+ * .NET
  * Js
  * Html
  * Css
