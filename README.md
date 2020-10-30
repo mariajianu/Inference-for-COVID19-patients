@@ -4,14 +4,14 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Used Technologies](#usedtechnologies)
-  * [How does it work? ](#howitworks)
+  * [Used Technologies](#used-technologies)
+  * [How does it work? ](#how-does-it-work)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Contributing](#contributing)
-  * [The Team](#team)
-  * [Role distribution](#roles)
+  * [The Team](#the-team)
+  * [Role distribution](#role-distribution)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
