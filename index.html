@@ -39,27 +39,41 @@
 					Covid19 Testing Form
 				</span>
 
-				<div class="wrap-input100 validate-input bg1" data-validate="Introduceti sexul">
-					<span class="label-input100">Care este sexul dumneavoastra?*</span>
-					<input class="input100" type="text" name="gender" placeholder="Introduceti sexul">
+				<div class="wrap-input100 input bg1">
+					<span class="label-input200">Care este sexul dumneavoastra?*</span>
+                    <input class="input50" type="radio" name="gender3" value="masculin"> Masculin
+                    <input class="input50" type="radio" name="gender3" value="feminin"> Feminin
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Introduceti varsta">
-					<span class="label-input100">Care este varsta dumneavoastra?*</span>
-					<input class="input100" type="text" name="age" placeholder="Introduceti varsta">
+					<span class="label-input200">Care este varsta dumneavoastra?*</span>
+					<input class="input50" type="number" name="age" placeholder="Introduceti varsta">
 				</div>
-
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Introduceti varsta">
-					<span class="label-input100">Cand ati inceput sa aveti simptome?*</span>
-					<input class="input100" type="text" name="data" placeholder="Introduceti data">
+                
+                <div class="wrap-input100 input bg1">
+					<span class="label-input200">TEST</span>
+                    <input class="input50" type="radio" name="gender4" value="yes" id="myCheck" onclick="myFunction()"> Yes
+                    <input class="input50" type="radio" name="gender4" value="no"> No
+                    <p id="text" style="display:none">Checked</p>
+                    <script>
+                        function myFunction() {
+                            var checkBox = document.getElementById("myCheck");
+                            var text = document.getElementById("text");
+                            if (checkBox.checked == true){
+                                text.style.display = "block";
+                            } else {
+                                text.style.display = "none";
+                            }
+                        }
+                    </script>
 				</div>
-
+                
 				<div class="wrap-input100 input100-select bg1">
-					<span class="label-input100">Motivul prezentarii*</span>
+					<span class="label-input200">Ati avut simptome asociate Covid in ultimele 14 zile?*</span>
 					<div>
 						<select class="js-select2" name="service">
-							<option>Please chooses</option>
-							<option>Test Covid</option>
+                            <option>Da</option>
+                            <option>Nu</option>
 						</select>
 						<div class="dropDownSelect2"></div>
 					</div>
@@ -81,21 +95,63 @@
 							<label class="label-radio100" for="radio2">
 								Febra
 							</label>
+                        </div>
+                        
+                        <div class="contact100-form-radio">
+							<input class="input-radio100" id="radio3" type="checkbox" name="type-product" value="digital">
+							<label class="label-radio100" for="radio3">
+								Greata
+							</label>
 						</div>
 
 						<div class="contact100-form-radio">
-							<input class="input-radio100" id="radio3" type="checkbox" name="type-product" value="service">
-							<label class="label-radio100" for="radio3">
-								Dureri de cap
+							<input class="input-radio100" id="radio4" type="checkbox" name="type-product" value="service">
+							<label class="label-radio100" for="radio4">
+								Stare de oboseala
+							</label>
+                        </div>
+                        
+                        <div class="contact100-form-radio">
+							<input class="input-radio100" id="radio5" type="checkbox" name="type-product" value="service">
+							<label class="label-radio100" for="radio5">
+								Frisoane
+							</label>
+                        </div>
+                        
+                        <div class="contact100-form-radio">
+							<input class="input-radio100" id="radio6" type="checkbox" name="type-product" value="service">
+							<label class="label-radio100" for="radio6">
+								Durere in gat
+							</label>
+                        </div>
+                        
+                        <div class="contact100-form-radio">
+							<input class="input-radio100" id="radio7" type="checkbox" name="type-product" value="service">
+							<label class="label-radio100" for="radio7">
+								Dificultati de respiratie
 							</label>
 						</div>
 					</div>
 				</div>
 
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
-					<span class="label-input100">Message</span>
-					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                <div class="wrap-input100 input bg1">
+					<span class="label-input200">Ati calatorit in zone cu risc de infectare?*</span>
+                    <input class="input50" type="radio" name="gender" value="yes"> Da
+                    <input class="input50" type="radio" name="gender" value="no"> Nu
+                </div>
+                
+                <div class="wrap-input100 input bg1">
+					<span class="label-input200">Ati folosit mijloace de transport in comun in ultimele 14 zile?*</span>
+                    <input class="input50" type="radio" name="gender1" value="yes"> Da
+                    <input class="input50" type="radio" name="gender1" value="no"> Nu
+                </div>
+                
+                <div class="wrap-input100 input bg1">
+					<span class="label-input200">Ati avut contact cu o persoana infectata in ultimele 14 zile?*</span>
+                    <input class="input50" type="radio" name="gender2" value="yes"> Da
+                    <input class="input50" type="radio" name="gender2" value="no"> Nu
 				</div>
+				
 
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
