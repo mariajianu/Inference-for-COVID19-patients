@@ -50,32 +50,12 @@
 					<input class="input50" type="number" name="age" placeholder="Introduceti varsta">
 				</div>
                 
-<!--                 <div class="wrap-input100 input bg1">
-					<span class="label-input200">TEST</span>
-                    <input class="input50" type="radio" name="gender4" value="yes" id="myCheck" onclick="myFunction()"> Yes
-                    <input class="input50" type="radio" name="gender4" value="no"> No
-                    <p id="text" style="display:none">Checked</p>
-                    <script>
-                        function myFunction() {
-                            var checkBox = document.getElementById("myCheck");
-                            var text = document.getElementById("text");
-                            if (checkBox.checked == true){
-                                text.style.display = "block";
-                            } else {
-                                text.style.display = "none";
-                            }
-                        }
-                    </script>
-				</div> -->
-                
-				<div class="wrap-input100 input bg1">
+                <div class="wrap-input100 input bg1">
 					<span class="label-input200">Ati avut simptome asociate COVID-19 in ultimele zile?</span>
-                    <input class="input50" type="radio" name="gender3" value="masculin"> DA
-                    <input class="input50" type="radio" name="gender3" value="feminin"> NU
-				</div>
-
-					<div class="wrap-input100 input bg1">
-						<span class="label-input200">Daca DA, ce simptome ati prezentat?</span>
+                    <input class="input50" type="radio" name="gender4" value="yes" id="myCheck" onclick="myFunction()"> Da
+                    <input class="input50" type="radio" name="gender4" value="no"> Nu
+                    <div id="checkbox" style="display:none" class="wrap-input100 input bg1">
+						<span class="label-input200">Ce simptome ati prezentat?</span>
 
 						<div class="contact100-form-radio m-t-15">
 							<input class="input-radio100" id="radio1" type="checkbox" name="type-product" value="physical" checked="checked">
@@ -126,7 +106,19 @@
 							</label>
 						</div>
 					</div>
-			
+                    <script>
+                        function myFunction() {
+                            var checkBox = document.getElementById("myCheck");
+                            var text = document.getElementById("checkbox");
+                            if (checkBox.checked == true){
+                                text.style.display = "block";
+                            } else {
+                                text.style.display = "none";
+                            }
+                        }
+                    </script>
+				</div>
+				
 
                 <div class="wrap-input100 input bg1">
 					<span class="label-input200">Ati calatorit in zone cu risc de infectare?*</span>
